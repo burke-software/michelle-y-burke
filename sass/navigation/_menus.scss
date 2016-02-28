@@ -105,3 +105,11 @@
 		width: 50%;
 	}
 }
+
+
+.site-title a {
+	font-family: $font__sans-serif;
+	font-size: 48px;
+	color: $color__text-main;
+	text-decoration: none;
+}

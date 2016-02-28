@@ -524,6 +524,12 @@ a {
   text-align: right;
   width: 50%; }
 
+.site-title a {
+  font-family: "Roboto", sans-serif;
+  font-size: 48px;
+  color: #404040;
+  text-decoration: none; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -730,11 +736,15 @@ a {
   transition: background-color 0.3s linear .2s, width 0.2s linear .2s;
   margin: 0 auto; }
   .btn-hero:hover {
-    background-color: #715643;
-    width: 310px; }
+    background-color: #715643; }
 
 .site-book-page .entry-header {
   display: none; }
+.site-book-page h3 {
+  font-size: 48px;
+  line-height: 1; }
+.site-book-page blockquote {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Asides
