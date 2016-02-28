@@ -114,6 +114,9 @@ add_action( 'widgets_init', 'michelle_y_burke_widgets_init' );
  * Enqueue scripts and styles.
  */
 function michelle_y_burke_scripts() {
+
+	wp_enqueue_style( 'michelle-y-burke-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:300,300italic|Roboto+Condensed|Alegreya:400,400italic,700,700italic&subset=latin', false ); 
+
 	wp_enqueue_style( 'michelle-y-burke-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'michelle-y-burke-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

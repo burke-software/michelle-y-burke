@@ -26,3 +26,13 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+
+.content-area {
+	width: 100%;
+	@include breakpoint(min, $bp__md) {
+		width: 800px;
+		margin: 0 auto;
+	}
+}

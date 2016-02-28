@@ -22,3 +22,13 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+
+@mixin breakpoint($min-max, $width) {
+	@if $min-max == 'max' {
+		$width: $width - 1;
+	}
+	@media screen and (#{$min-max}-width: $width) {
+		@content;
+	}
+}
