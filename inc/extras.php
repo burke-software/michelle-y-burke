@@ -27,3 +27,40 @@ function michelle_y_burke_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'michelle_y_burke_body_classes' );
+
+
+/**
+ * Option to update footer text
+ *
+ * Adapted from https://wordpress.org/themes/visual/
+ */
+
+function michelle_y_burke_get_option( $name, $default = false ) {
+	if ( get_option('michelle_y_burke-theme') ) {
+		$options = get_option('michelle_y_burke-theme');
+	}
+
+	if ( isset( $options[$name] ) ) {
+		return $options[$name];
+	} else {
+		return $default;
+	}
+}
+
+function michelle_y_burke_return_footer_text() {
+	$footer_text = sprintf(
+		'<a href="%1$s" title="%2$s" rel="generator">WordPress</a> <a href="%3$s">%4$s</a>',
+		esc_url( 'http://wordpress.org' ),
+		__( 'A Semantic Personal Publishing Platform', 'michelle_y_burke' ),
+		esc_url( 'http://burkesoftware.com/' ),
+		__( 'Theme designed by Burke Software and Consulting', 'michelle_y_burke' )
+    );
+    return $footer_text;
+}
+
+function michelle_y_burke_footer_text() {
+    $footer_text = michelle_y_burke_get_option( 'footer_text', michelle_y_burke_return_footer_text() );
+    echo $footer_text;
+}
+
+add_action( 'michelle_y_burke_footer_text', 'michelle_y_burke_footer_text' );

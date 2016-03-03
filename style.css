@@ -715,18 +715,26 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 10px 0 0; }
 
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
 
 .content-area {
-  width: 100%; }
+  width: 100%;
+  padding: 0 15px; }
   @media screen and (min-width: 992px) {
     .content-area {
       width: 800px;
       margin: 0 auto; } }
+
+.site-info {
+  text-align: center;
+  font-family: Roboto;
+  padding: 30px 0px;
+  background-color: #eeeeee;
+  font-size: 18px; }
 
 .book-hero {
   width: 100%;
