@@ -32,7 +32,7 @@ foreach ($customFields as $key => $value) {
 	<div class="book-hero">
 		<div class="book-hero-content">
 			<div class="book-hero-title">
-				<img src="<?php echo get_template_directory_uri() ?>/images/isolated-raster-logo.png" alt="Animal Purpose Poems" />
+				<img src="<?php echo get_template_directory_uri() ?>/images/animal-purpose.svg" alt="Animal Purpose Poems" />
 			</div>
 			<div class="book-hero-photo">
 				<img src="<?php echo get_template_directory_uri() ?>/images/book-hero-image.png" alt="" />
