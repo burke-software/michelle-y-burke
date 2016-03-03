@@ -38,7 +38,7 @@
 .book-hero-title {
 	padding-left: 20px;
 	img {
-		max-width: 300px;
+		width: 300px;
 	}
 	@include breakpoint(max, $bp__lg) {
 		display: none;

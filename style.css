@@ -695,6 +695,29 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.content-area {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .content-area.book-page {
+    max-width: 800px; }
+
+.site-main {
+  float: left;
+  margin: 0;
+  width: 75%; }
+  .full-width .site-main {
+    width: 100%; }
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%; }
+
+.site-footer {
+  clear: both;
+  width: 100%; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -720,14 +743,6 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
-
-.content-area {
-  width: 100%;
-  padding: 0 15px; }
-  @media screen and (min-width: 992px) {
-    .content-area {
-      width: 800px;
-      margin: 0 auto; } }
 
 .site-info {
   text-align: center;
@@ -772,7 +787,7 @@ a {
 .book-hero-title {
   padding-left: 20px; }
   .book-hero-title img {
-    max-width: 300px; }
+    width: 300px; }
   @media screen and (max-width: 1199px) {
     .book-hero-title {
       display: none; } }

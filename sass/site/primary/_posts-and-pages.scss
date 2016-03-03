@@ -29,14 +29,14 @@
 
 
 
-.content-area {
-	width: 100%;
-	padding: 0 15px;
-	@include breakpoint(min, $bp__md) {
-		width: 800px;
-		margin: 0 auto;
-	}
-}
+// .content-area {
+// 	width: 100%;
+// 	padding: 0 15px;
+// 	@include breakpoint(min, $bp__md) {
+// 		width: 800px;
+// 		margin: 0 auto;
+// 	}
+// }
 
 .site-info {
 	text-align: center;

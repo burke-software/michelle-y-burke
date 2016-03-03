@@ -1,11 +1,26 @@
 .content-area {
-	float: left;
-	margin: 0 (-$size__site-sidebar) 0 0;
-	width: $size__site-main;
+	width: 100%;
+	max-width: $bp__lg;
+	margin: 0 auto;
+
+	// padding: 0 15px;
+	// @include breakpoint(min, $bp__md) {
+	// 	width: 800px;
+	// 	margin: 0 auto;
+	// }
+	&.book-page {
+		max-width: 800px;
+	}
 }
 
 .site-main {
-	margin: 0 $size__site-sidebar 0 0;
+	float: left;
+	margin: 0;
+	width: (100% - $size__site-sidebar);
+
+	.full-width & {
+		width: 100%;
+	}
 }
 
 .site-content .widget-area {
@@ -16,5 +31,5 @@
 
 .site-footer {
 	clear: both;
-	width: $size__site-main;
+	width: 100%;
 }

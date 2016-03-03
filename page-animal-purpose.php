@@ -50,7 +50,7 @@ foreach ($customFields as $key => $value) {
 		</div>
 	</div>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area full-width book-page">
 		<main id="main" class="site-main site-book-page" role="main">
 
 			<?php
