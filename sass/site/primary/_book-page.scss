@@ -49,6 +49,9 @@
 	text-align: center;
 	img {
 		max-width: 350px;
+		@include breakpoint(max, 360px) {
+			max-width: 300px;
+		}
 	}
 	@include breakpoint(max, $bp__lg) {
 		padding-right: 20px;

@@ -463,10 +463,12 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: right; }
+  @media screen and (max-width: 889px) {
+    .main-navigation {
+      float: left;
+      clear: both; } }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -501,7 +503,19 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  border: 0;
+  border-radius: 0;
+  background-color: #ddd;
+  color: #4c4c4c; }
+
+@media screen and (min-width: 500px) {
   .menu-toggle {
     display: none; }
 
@@ -524,11 +538,70 @@ a {
   text-align: right;
   width: 50%; }
 
-.site-title a {
-  font-family: "Roboto", sans-serif;
-  font-size: 48px;
-  color: #404040;
-  text-decoration: none; }
+.site-header {
+  position: relative; }
+  @media screen and (min-width: 1200px) {
+    .site-header {
+      width: 1200px;
+      margin: 0 auto; } }
+  @media screen and (max-width: 1199px) {
+    .site-header {
+      width: 90%;
+      margin: 0 5%; } }
+  @media screen and (max-width: 499px) {
+    .site-header {
+      width: calc(100% - 30px);
+      margin: 0 15px; } }
+
+@media screen and (min-width: 890px) {
+  .site-branding {
+    display: inline-block;
+    float: left; } }
+
+.site-title {
+  margin: 20px 0 10px; }
+  @media screen and (max-width: 889px) {
+    .site-title {
+      margin-bottom: 5px; } }
+  .site-title a {
+    font-family: "Roboto", sans-serif;
+    font-size: 44px;
+    color: #404040;
+    text-decoration: none; }
+    @media screen and (max-width: 499px) {
+      .site-title a {
+        font-size: 36px; } }
+
+.main-navigation .menu-item a {
+  padding: 45px 15px 10px;
+  display: inline-block; }
+  @media screen and (max-width: 889px) {
+    .main-navigation .menu-item a {
+      padding-top: 0;
+      padding-bottom: 13px; } }
+  @media screen and (max-width: 499px) {
+    .main-navigation .menu-item a {
+      padding-left: 0;
+      margin-right: 15px; }
+      .main-navigation .menu-item a:after {
+        content: '';
+        display: inline-block;
+        margin: 0 15px;
+        color: #bbb;
+        width: 2px;
+        height: 30px;
+        background-color: #bbb;
+        position: absolute;
+        top: 2px;
+        -ms-transform: skewX(-15deg);
+        -webkit-transform: skewX(-15deg);
+        transform: skewX(-15deg); } }
+
+.main-navigation .menu-item:first-child a {
+  padding-left: 2px; }
+
+.main-navigation .menu-item:last-child a:after {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -699,6 +772,9 @@ a {
   text-align: center; }
   .book-hero-photo img {
     max-width: 350px; }
+    @media screen and (max-width: 359px) {
+      .book-hero-photo img {
+        max-width: 300px; } }
   @media screen and (max-width: 1199px) {
     .book-hero-photo {
       padding-right: 20px; } }

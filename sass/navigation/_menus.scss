@@ -1,8 +1,10 @@
 .main-navigation {
-	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	float: right;
+	@include breakpoint(max, $bp__menu-break) {
+		float: left;
+		clear: both;
+	}
 
 	ul {
 		display: none;
@@ -75,8 +77,20 @@
 .main-navigation.toggled ul {
 	display: block;
 }
+.menu-toggle {
+	position: absolute;
+	top: 0px;
+	right: -15px;
+	text-transform: uppercase;
+	font-family: $font__sans-serif-condensed;
+	font-size: 14px;
+	border: 0;
+	border-radius: 0;
+	background-color: #ddd;
+	color: $color__dark-gray;
+}
 
-@media screen and (min-width: 37.5em) {
+@include breakpoint(min, $bp__menu-break-sm) {
 	.menu-toggle {
 		display: none;
 	}
@@ -107,9 +121,80 @@
 }
 
 
-.site-title a {
-	font-family: $font__sans-serif;
-	font-size: 48px;
-	color: $color__text-main;
-	text-decoration: none;
+
+.site-header {
+	position: relative;
+
+	@include breakpoint(min, $bp__lg) {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	@include breakpoint(max, $bp__lg) {
+		width: 90%;
+		margin: 0 5%;
+	}
+	@include breakpoint(max, $bp__menu-break-sm) {
+		width: calc(100% - 30px);
+		margin: 0 15px;
+	}
+}
+
+.site-branding {
+	@include breakpoint(min, $bp__menu-break) {
+		display: inline-block;
+		float: left;
+	}
+}
+
+.site-title {
+	margin: 20px 0 10px;
+	@include breakpoint(max, $bp__menu-break) {
+		margin-bottom: 5px;
+	}
+	a {
+		font-family: $font__sans-serif;
+		font-size: 44px;
+		color: $color__text-main;
+		text-decoration: none;
+		@include breakpoint(max, $bp__menu-break-sm) {
+			font-size: 36px;
+		}
+	}
+}
+
+.main-navigation .menu-item a {
+	padding: 45px 15px 10px;
+	display: inline-block;
+	@include breakpoint(max, $bp__menu-break) {
+		padding-top: 0;
+		padding-bottom: 13px;
+	}
+	@include breakpoint(max, $bp__menu-break-sm) {
+		padding-left: 0;
+		margin-right: 15px;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			margin: 0 15px;
+			color: #bbb;
+			width: 2px;
+			height: 30px;
+			background-color: #bbb;
+			position: absolute;
+			top: 2px;
+			-ms-transform: skewX(-15deg);
+			-webkit-transform: skewX(-15deg);
+			transform: skewX(-15deg);
+		}
+	}
+}
+
+.main-navigation .menu-item:first-child a {
+	padding-left: 2px;
+}
+.main-navigation .menu-item:last-child a {
+	&:after {
+		display: none;
+	}
 }
