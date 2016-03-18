@@ -11,7 +11,7 @@ get_header(); ?>
 <?php 
 $customFields = get_post_custom();
 $reformatted_date = "";
-$order_from_values = [];
+$order_from_values = array();
 
 foreach ($customFields as $key => $value) {
 	if ($key == "Order From") {
