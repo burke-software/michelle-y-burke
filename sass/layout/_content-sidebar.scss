@@ -1,7 +1,11 @@
 .content-area {
 	width: 100%;
 	max-width: $bp__lg;
-	margin: 0 auto;
+	@include breakpoint(max, $bp__lg) {
+		max-width: none;
+		width: 90%;
+	}
+	margin: 20px auto;
 
 	// padding: 0 15px;
 	// @include breakpoint(min, $bp__md) {
@@ -15,11 +19,40 @@
 
 .site-main {
 	float: left;
-	margin: 0;
-	width: (100% - $size__site-sidebar);
+	margin: 0 3% 0 0;
+	width: (100% - $size__site-sidebar - 3%);
+	@include breakpoint(max, $bp__md) {
+		width: (100% - 33% - 3%);
+	}
+	@include breakpoint(max, $bp__sm) {
+		width: 100%;
+		margin: 0;
+	}
 
 	.full-width & {
 		width: 100%;
+	}
+
+	article {
+		background-color: #fafafa;
+		border: 1px solid #f2f2f2;
+		padding: 20px;
+	}
+}
+
+.archive-page article {
+	width: 48.5%;
+	margin-right: 3%;
+	float: left;
+
+	&:nth-of-type(2n+2) {
+		margin-right: 0;
+	}
+
+	@include breakpoint(max, $bp__md) {
+		width: 100%;
+		margin-right: 0;
+		float: none;
 	}
 }
 
@@ -27,6 +60,12 @@
 	float: right;
 	overflow: hidden;
 	width: $size__site-sidebar;
+	@include breakpoint(max, $bp__md) {
+		width: 33%;
+	}
+	@include breakpoint(max, $bp__sm) {
+		width: 100%;
+	}
 }
 
 .site-footer {

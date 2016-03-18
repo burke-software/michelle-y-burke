@@ -40,7 +40,7 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+	
 	<footer class="entry-footer">
 		<?php michelle_y_burke_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

@@ -143,6 +143,7 @@
 	@include breakpoint(min, $bp__menu-break) {
 		display: inline-block;
 		float: left;
+		margin-left: 21px;
 	}
 }
 

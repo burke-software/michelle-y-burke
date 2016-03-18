@@ -25,6 +25,7 @@
 		?>
 	</div><!-- .entry-content -->
 
+	<?php if ( current_user_can( 'edit_post', $post->ID ) ) { ?>
 	<footer class="entry-footer">
 		<?php
 			edit_post_link(
@@ -38,4 +39,5 @@
 			);
 		?>
 	</footer><!-- .entry-footer -->
+	<?php } ?>
 </article><!-- #post-## -->
