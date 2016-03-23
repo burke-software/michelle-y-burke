@@ -915,7 +915,8 @@ a {
   transition: background-color 0.3s linear .2s, width 0.2s linear .2s;
   margin: 0 auto; }
   .btn-hero:hover {
-    background-color: #715643; }
+    background-color: #715643;
+    color: white; }
 
 .site-book-page .entry-header {
   display: none; }
