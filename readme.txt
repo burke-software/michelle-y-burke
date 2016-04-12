@@ -15,6 +15,10 @@ A starter theme called michelle-y-burke, or underscores.
 
 Hi. I'm a starter theme called michelle-y-burke, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
+== Author's Notes ==
+- `sass --watch sass/style.scss:style.css` for preprocessing
+- no auto deploy at this point
+
 == Installation ==
 	
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
